@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="프로필 사진 자리">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d4d4d8" />
+      <stop offset="1" stop-color="#a1a1aa" />
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" fill="url(#g)" />
+  <circle cx="80" cy="62" r="26" fill="#fafafa" />
+  <path d="M80 96c-26 0-44 16-48 38h96c-4-22-22-38-48-38z" fill="#fafafa" />
+</svg>
