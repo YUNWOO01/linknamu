@@ -1,12 +1,13 @@
 import LinkCard from "@/components/LinkCard";
 import Profile from "@/components/Profile";
 
-// TODO: 더미 데이터입니다. 나중에 실제 프로필과 링크로 교체하세요.
 const profile = {
-  name: "이윤우",
-  bio: "안녕하세요",
-  avatarUrl: "/avatar-placeholder.svg",
+  name: "비밀",
+  bio: "안녕하세요. 안녕하세요",
+  avatarUrl: "/profile.jpg",
 };
+
+// TODO: 더미 데이터입니다. 나중에 실제 링크로 교체하세요.
 
 const links = [
   { title: "GitHub", href: "https://github.com" },
@@ -16,14 +17,14 @@ const links = [
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col items-center gap-8 px-5 py-12 sm:py-16">
+    <main className="mx-auto flex min-h-screen w-full max-w-[420px] flex-col items-center px-7 py-16 sm:px-8 sm:py-24">
       <Profile
         name={profile.name}
         bio={profile.bio}
         avatarUrl={profile.avatarUrl}
       />
 
-      <nav className="flex w-full flex-col gap-3">
+      <nav className="mt-12 flex w-full flex-col gap-3.5 sm:mt-14 sm:gap-4">
         {links.map((link) => (
           <LinkCard key={link.href} title={link.title} href={link.href} />
         ))}

@@ -3,21 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --foreground: #f4f6fb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  min-height: 100%;
 }
 
 body {
+  /* iOS 주소창까지 감안한 뷰포트 높이 (dvh 미지원 브라우저는 vh로 대체) */
+  min-height: 100vh;
+  min-height: 100dvh;
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-pretendard), system-ui, sans-serif;
+  /* 쿨톤 그라데이션: 검정에서 로얄 블루로 떨어지고, 하드 스톱 한 줄로 날을 세웁니다. */
+  background-color: #000205;
+  background-image:
+    linear-gradient(
+      114deg,
+      transparent 0 56%,
+      rgba(96, 148, 255, 0.11) 56% 59.5%,
+      transparent 59.5%
+    ),
+    radial-gradient(
+      95% 60% at 50% 104%,
+      rgba(37, 99, 235, 0.5) 0%,
+      rgba(29, 78, 216, 0.14) 45%,
+      transparent 72%
+    ),
+    linear-gradient(
+      172deg,
+      #000000 0%,
+      #01030c 26%,
+      #050e2e 52%,
+      #0d2068 78%,
+      #1b45c4 100%
+    );
+  background-repeat: no-repeat;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.35);
 }
 
 @layer utilities {
