@@ -1,19 +1,12 @@
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 import Profile from "@/components/Profile";
+import { links } from "@/lib/links";
 
 const profile = {
   name: "비밀",
   bio: "안녕하세요. 안녕하세요",
   avatarUrl: "/profile.jpg",
 };
-
-// TODO: 더미 데이터입니다. 나중에 실제 링크로 교체하세요.
-
-const links = [
-  { title: "GitHub", href: "https://github.com" },
-  { title: "LinkedIn", href: "https://linkedin.com" },
-  { title: "Blog", href: "https://example.com" },
-];
 
 export default function Home() {
   return (
@@ -25,9 +18,7 @@ export default function Home() {
       />
 
       <nav className="mt-12 flex w-full flex-col gap-3.5 sm:mt-14 sm:gap-4">
-        {links.map((link) => (
-          <LinkCard key={link.href} title={link.title} href={link.href} />
-        ))}
+        <LinkList links={links} />
       </nav>
     </main>
   );
